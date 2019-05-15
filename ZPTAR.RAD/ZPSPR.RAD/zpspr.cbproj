@@ -1,0 +1,1128 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{846AF26A-162B-4D78-8336-F300113E3669}</ProjectGuid>
+        <ProjectVersion>18.1</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Library</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <_TCHARMapping>wchar_t</_TCHARMapping>
+        <ILINK_LibraryPath>..\XLS_M.BDS\;..\SERVIS\;..\FUNC_ZPW.PRJ\;..\DM_RAD10\;..\ABCTR.BDS\;..\..\I.WFM\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <SanitizedProjectName>zpspr</SanitizedProjectName>
+        <ProjectType>CppDynamicLibrary</ProjectType>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+        <IncludePath>..\XLS_M.BDS\;..\SERVIS\;..\FUNC_ZPW.PRJ\;..\DM_RAD10\;..\ABCTR.BDS\;..\..\I.WFM\;..\H\;C:\XExComponets\18\DevExpressVCL\Library\RAD Studio 10.1;C:\XExComponets\18\FAMTableXE10LC;$(IncludePath)</IncludePath>
+        <AllPackageLibs>rtl.lib;vcl.lib;cxLibraryRS24.lib;dxGDIPlusRS24.lib;dxCoreRS24.lib;dxThemeRS24.lib;vclx.lib;dxBarRS24.lib;dxLayoutControlRS24.lib;cxPageControlRS24.lib;dxOfficeCoreRS24.lib;cxDataRS24.lib;dbrtl.lib;cxEditorsRS24.lib;vclimg.lib;vcldb.lib;dxComnRS24.lib;dxSkinsCoreRS24.lib;dxSkinBlackRS24.lib;dxSkinBlueprintRS24.lib;dxSkinBlueRS24.lib;dxSkinCaramelRS24.lib;dxSkinCoffeeRS24.lib;dxSkinDarkRoomRS24.lib;dxSkinDarkSideRS24.lib;dxSkinDevExpressDarkStyleRS24.lib;dxSkinDevExpressStyleRS24.lib;dxSkinFoggyRS24.lib;dxSkinGlassOceansRS24.lib;dxSkinHighContrastRS24.lib;dxSkiniMaginaryRS24.lib;dxSkinLilianRS24.lib;dxSkinLiquidSkyRS24.lib;dxSkinLondonLiquidSkyRS24.lib;dxSkinMcSkinRS24.lib;dxSkinMetropolisDarkRS24.lib;dxSkinMetropolisRS24.lib;dxSkinMoneyTwinsRS24.lib;dxSkinOffice2007BlackRS24.lib;dxSkinOffice2007BlueRS24.lib;dxSkinOffice2007GreenRS24.lib;dxSkinOffice2007PinkRS24.lib;dxSkinOffice2007SilverRS24.lib;dxSkinOffice2010BlackRS24.lib;dxSkinOffice2010BlueRS24.lib;dxSkinOffice2010SilverRS24.lib;dxSkinOffice2013DarkGrayRS24.lib;dxSkinOffice2013LightGrayRS24.lib;dxSkinOffice2013WhiteRS24.lib;dxSkinPumpkinRS24.lib;dxSkinSevenClassicRS24.lib;dxSkinSevenRS24.lib;dxSkinSharpPlusRS24.lib;dxSkinSharpRS24.lib;dxSkinSilverRS24.lib;dxSkinSpringTimeRS24.lib;dxSkinStardustRS24.lib;dxSkinSummer2008RS24.lib;dxSkinTheAsphaltWorldRS24.lib;dxSkinValentineRS24.lib;dxSkinVS2010RS24.lib;dxSkinWhiteprintRS24.lib;dxSkinXmas2008BlueRS24.lib;dxSkinOffice2016ColorfulRS24.lib;dxSkinOffice2016DarkRS24.lib;dxSkinVisualStudio2013BlueRS24.lib;dxSkinVisualStudio2013DarkRS24.lib;dxSkinVisualStudio2013LightRS24.lib;vclactnband.lib;xmlrtl.lib;cxGridRS24.lib;cxExportRS24.lib;dxSpreadSheetCoreDialogsRS24.lib;dxSpreadSheetCoreRS24.lib;dxSpreadSheetRS24.lib;dxServerModeRS24.lib;dxSpreadSheetCoreConditionalFormattingDialogsRS24.lib;cxTreeListRS24.lib;dxPScxPCProdRS24.lib;dxPSCoreRS24.lib;dxPScxCommonRS24.lib;dxPSLnksRS24.lib;dxPScxExtCommonRS24.lib;dxPsPrVwAdvRS24.lib;dxBarExtItemsRS24.lib;dxPSPrVwRibbonRS24.lib;dxRibbonRS24.lib;dxPScxGridLnkRS24.lib;dxPSdxLCLnkRS24.lib;dxPSdxSpreadSheetLnkRS24.lib;FambdeXe10LC.lib;dxRibbonCustomizationFormRS24.lib</AllPackageLibs>
+        <Multithreaded>true</Multithreaded>
+        <BCC_DataAlignment>Byte</BCC_DataAlignment>
+        <VerInfo_Locale>1049</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+        <DynamicRTL>true</DynamicRTL>
+        <UsePackages>true</UsePackages>
+        <IntermediateOutputDir>.\$(Platform)\$(Config)</IntermediateOutputDir>
+        <FinalOutputDir>..\W\W.TZP\</FinalOutputDir>
+        <BCC_wpar>false</BCC_wpar>
+        <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+        <BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+        <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <Manifest_File>(None)</Manifest_File>
+        <Debugger_RunParams>*zp*</Debugger_RunParams>
+        <Debugger_HostApplication>D:\Perforce-N\E1.WFM\kubnet51.exe</Debugger_HostApplication>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CloudService;CustomIPTransport;cxDataRS24;cxEditorsRS24;cxExportRS24;cxGridRS24;cxLibraryRS24;cxPageControlRS24;cxPivotGridChartRS24;cxPivotGridOLAPRS24;cxPivotGridRS24;cxSchedulerGridRS24;cxSchedulerRibbonStyleEventEditorRS24;cxSchedulerRS24;cxSchedulerTreeBrowserRS24;cxSchedulerWebServiceStorageRS24;cxTreeListdxBarPopupMenuRS24;cxTreeListRS24;cxVerticalGridRS24;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;dxADOEMFRS24;dxADOServerModeRS24;dxAuthorizationAgentsRS24;dxBarDBNavRS24;dxBarExtDBItemsRS24;dxBarExtItemsRS24;dxBarRS24;dxComnRS24;dxCoreRS24;dxdborRS24;dxdbtrRS24;dxDBXServerModeRS24;dxDockingRS24;dxEMFRS24;dxFireDACEMFRS24;dxFireDACServerModeRS24;dxFlowChartAdvancedCustomizeFormRS24;dxFlowChartRS24;dxGaugeControlRS24;dxGDIPlusRS24;dxHttpIndyRequestRS24;dxLayoutControlRS24;dxMapControlRS24;dxmdsRS24;dxNavBarRS24;dxOfficeCoreRS24;dxorgcRS24;dxPDFViewerRS24;dxPSCoreRS24;dxPScxCommonRS24;dxPScxExtCommonRS24;dxPScxGridLnkRS24;dxPScxPCProdRS24;dxPScxPivotGridLnkRS24;dxPScxSchedulerLnkRS24;dxPScxTLLnkRS24;dxPScxVGridLnkRS24;dxPSDBTeeChartRS24;dxPSdxDBOCLnkRS24;dxPSdxDBTVLnkRS24;dxPSdxFCLnkRS24;dxPSdxGaugeControlLnkRS24;dxPSdxLCLnkRS24;dxPSdxMapControlLnkRS24;dxPSdxOCLnkRS24;dxPSdxPDFViewerLnkRS24;dxPSdxSpreadSheetLnkRS24;dxPSLnksRS24;dxPsPrVwAdvRS24;dxPSPrVwRibbonRS24;dxPSRichEditControlLnkRS24;dxPSTeeChartRS24;dxRibbonCustomizationFormRS24;dxRibbonRS24;dxRichEditControlCoreRS24;dxRichEditControlRS24;dxRichEditCoreRS24;dxRichEditDocumentModelRS24;dxRichEditInplaceRS24;dxServerModeRS24;dxSkinBlackRS24;dxSkinBlueprintRS24;dxSkinBlueRS24;dxSkinCaramelRS24;dxSkinCoffeeRS24;dxSkinDarkRoomRS24;dxSkinDarkSideRS24;dxSkinDevExpressDarkStyleRS24;dxSkinDevExpressStyleRS24;dxSkinFoggyRS24;dxSkinGlassOceansRS24;dxSkinHighContrastRS24;dxSkiniMaginaryRS24;dxSkinLilianRS24;dxSkinLiquidSkyRS24;dxSkinLondonLiquidSkyRS24;dxSkinMcSkinRS24;dxSkinMetropolisDarkRS24;dxSkinMetropolisRS24;dxSkinMoneyTwinsRS24;dxSkinOffice2007BlackRS24;dxSkinOffice2007BlueRS24;dxSkinOffice2007GreenRS24;dxSkinOffice2007PinkRS24;dxSkinOffice2007SilverRS24;dxSkinOffice2010BlackRS24;dxSkinOffice2010BlueRS24;dxSkinOffice2010SilverRS24;dxSkinOffice2013DarkGrayRS24;dxSkinOffice2013LightGrayRS24;dxSkinOffice2013WhiteRS24;dxSkinOffice2016ColorfulRS24;dxSkinOffice2016DarkRS24;dxSkinPumpkinRS24;dxSkinsCoreRS24;dxSkinSevenClassicRS24;dxSkinSevenRS24;dxSkinSharpPlusRS24;dxSkinSharpRS24;dxSkinSilverRS24;dxSkinSpringTimeRS24;dxSkinStardustRS24;dxSkinSummer2008RS24;dxSkinTheAsphaltWorldRS24;dxSkinTheBezierRS24;dxSkinValentineRS24;dxSkinVisualStudio2013BlueRS24;dxSkinVisualStudio2013DarkRS24;dxSkinVisualStudio2013LightRS24;dxSkinVS2010RS24;dxSkinWhiteprintRS24;dxSkinXmas2008BlueRS24;dxSpellCheckerRS24;dxSpreadSheetConditionalFormattingDialogsRS24;dxSpreadSheetCoreConditionalFormattingDialogsRS24;dxSpreadSheetCoreDialogsRS24;dxSpreadSheetCoreRS24;dxSpreadSheetInplaceRichEditRS24;dxSpreadSheetReportDesignerRS24;dxSpreadSheetRS24;dxTabbedMDIRS24;dxThemeRS24;dxTileControlRS24;dxtrmdRS24;dxWizardControlRS24;EhLib240;emsclient;emsclientfiredac;emsedge;emshosting;FambdeXe10LC;FireDAC;FireDACADSDriver;FireDACASADriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACSqliteDriver;FireDACTDataDriver;FlexCel_Core;FlexCel_Pdf;FlexCel_Render;FlexCel_Report;FlexCel_XlsAdapter;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;FMXTee;FmxTeeUI;ibmonitor;ibxbindings;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;Intraweb;RESTBackendComponents;RESTComponents;rtl;SevenZip;soapmidas;soaprtl;soapserver;svn;Tee;TeeDB;TeeUI;tethering;vcl;VCL_FlexCel_Components;VCL_FlexCel_Core;vclactnband;vcldb;vcldsnap;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
+        <PackageImports>adortl;appanalytics;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CloudService;CustomIPTransport;cxDataRS24;cxEditorsRS24;cxExportRS24;cxGridRS24;cxLibraryRS24;cxPageControlRS24;cxPivotGridChartRS24;cxPivotGridOLAPRS24;cxPivotGridRS24;cxSchedulerGridRS24;cxSchedulerRibbonStyleEventEditorRS24;cxSchedulerRS24;cxSchedulerTreeBrowserRS24;cxTreeListdxBarPopupMenuRS24;cxTreeListRS24;cxVerticalGridRS24;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;dxADOServerModeRS24;dxBarDBNavRS24;dxBarExtDBItemsRS24;dxBarExtItemsRS24;dxBarRS24;dxComnRS24;dxCoreRS24;dxdborRS24;dxdbtrRS24;dxDBXServerModeRS24;dxDockingRS24;dxFireDACServerModeRS24;dxFlowChartAdvancedCustomizeFormRS24;dxFlowChartRS24;dxGaugeControlRS24;dxGDIPlusRS24;dxHttpIndyRequestRS24;dxLayoutControlRS24;dxMapControlRS24;dxmdsRS24;dxNavBarRS24;dxOfficeCoreRS24;dxorgcRS24;dxPDFViewerRS24;dxPSCoreRS24;dxPScxCommonRS24;dxPScxExtCommonRS24;dxPScxGridLnkRS24;dxPScxPCProdRS24;dxPScxPivotGridLnkRS24;dxPScxSchedulerLnkRS24;dxPScxTLLnkRS24;dxPScxVGridLnkRS24;dxPSDBTeeChartRS24;dxPSdxDBOCLnkRS24;dxPSdxDBTVLnkRS24;dxPSdxFCLnkRS24;dxPSdxGaugeControlLnkRS24;dxPSdxLCLnkRS24;dxPSdxMapControlLnkRS24;dxPSdxOCLnkRS24;dxPSdxPDFViewerLnkRS24;dxPSdxSpreadSheetLnkRS24;dxPSLnksRS24;dxPsPrVwAdvRS24;dxPSPrVwRibbonRS24;dxPSRichEditControlLnkRS24;dxPSTeeChartRS24;dxRibbonCustomizationFormRS24;dxRibbonRS24;dxRichEditControlCoreRS24;dxRichEditControlRS24;dxRichEditCoreRS24;dxRichEditDocumentModelRS24;dxRichEditInplaceRS24;dxServerModeRS24;dxSkinBlackRS24;dxSkinBlueprintRS24;dxSkinBlueRS24;dxSkinCaramelRS24;dxSkinCoffeeRS24;dxSkinDarkRoomRS24;dxSkinDarkSideRS24;dxSkinDevExpressDarkStyleRS24;dxSkinDevExpressStyleRS24;dxSkinFoggyRS24;dxSkinGlassOceansRS24;dxSkinHighContrastRS24;dxSkiniMaginaryRS24;dxSkinLilianRS24;dxSkinLiquidSkyRS24;dxSkinLondonLiquidSkyRS24;dxSkinMcSkinRS24;dxSkinMetropolisDarkRS24;dxSkinMetropolisRS24;dxSkinMoneyTwinsRS24;dxSkinOffice2007BlackRS24;dxSkinOffice2007BlueRS24;dxSkinOffice2007GreenRS24;dxSkinOffice2007PinkRS24;dxSkinOffice2007SilverRS24;dxSkinOffice2010BlackRS24;dxSkinOffice2010BlueRS24;dxSkinOffice2010SilverRS24;dxSkinOffice2013DarkGrayRS24;dxSkinOffice2013LightGrayRS24;dxSkinOffice2013WhiteRS24;dxSkinOffice2016ColorfulRS24;dxSkinOffice2016DarkRS24;dxSkinPumpkinRS24;dxSkinsCoreRS24;dxSkinSevenClassicRS24;dxSkinSevenRS24;dxSkinSharpPlusRS24;dxSkinSharpRS24;dxSkinSilverRS24;dxSkinSpringTimeRS24;dxSkinStardustRS24;dxSkinSummer2008RS24;dxSkinTheAsphaltWorldRS24;dxSkinValentineRS24;dxSkinVisualStudio2013BlueRS24;dxSkinVisualStudio2013DarkRS24;dxSkinVisualStudio2013LightRS24;dxSkinVS2010RS24;dxSkinWhiteprintRS24;dxSkinXmas2008BlueRS24;dxSpellCheckerRS24;dxSpreadSheetConditionalFormattingDialogsRS24;dxSpreadSheetCoreConditionalFormattingDialogsRS24;dxSpreadSheetCoreDialogsRS24;dxSpreadSheetCoreRS24;dxSpreadSheetInplaceRichEditRS24;dxSpreadSheetReportDesignerRS24;dxSpreadSheetRS24;dxTabbedMDIRS24;dxThemeRS24;dxTileControlRS24;dxtrmdRS24;dxWizardControlRS24;emsclient;emsclientfiredac;emsedge;emshosting;FireDAC;FireDACADSDriver;FireDACASADriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACSqliteDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;FMXTee;FmxTeeUI;ibmonitor;ibxbindings;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;Intraweb;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;Tee;TeeDB;TeeUI;tethering;vcl;vclactnband;vcldb;vcldsnap;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+        <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <Defines>_DEBUG;$(Defines)</Defines>
+        <BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+        <BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+        <DCC_Define>DEBUG</DCC_Define>
+        <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+        <TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+        <BCC_StackFrames>true</BCC_StackFrames>
+        <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+        <TASM_Debugging>Full</TASM_Debugging>
+        <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+        <BCC_EnableCPPExceptions>true</BCC_EnableCPPExceptions>
+        <BCC_DisableFramePtrElimOpt>true</BCC_DisableFramePtrElimOpt>
+        <BCC_DisableSpellChecking>true</BCC_DisableSpellChecking>
+        <CLANG_UnwindTables>true</CLANG_UnwindTables>
+        <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <LinkPackageImports>rtl.bpi;vcl.bpi;cxLibraryRS24.bpi;dxGDIPlusRS24.bpi;dxCoreRS24.bpi;dxThemeRS24.bpi;vclx.bpi;dxBarRS24.bpi;dxLayoutControlRS24.bpi;cxPageControlRS24.bpi;dxOfficeCoreRS24.bpi;cxDataRS24.bpi;dbrtl.bpi;cxEditorsRS24.bpi;vclimg.bpi;vcldb.bpi;dxComnRS24.bpi;dxSkinsCoreRS24.bpi;dxSkinBlackRS24.bpi;dxSkinBlueprintRS24.bpi;dxSkinBlueRS24.bpi;dxSkinCaramelRS24.bpi;dxSkinCoffeeRS24.bpi;dxSkinDarkRoomRS24.bpi;dxSkinDarkSideRS24.bpi;dxSkinDevExpressDarkStyleRS24.bpi;dxSkinDevExpressStyleRS24.bpi;dxSkinFoggyRS24.bpi;dxSkinGlassOceansRS24.bpi;dxSkinHighContrastRS24.bpi;dxSkiniMaginaryRS24.bpi;dxSkinLilianRS24.bpi;dxSkinLiquidSkyRS24.bpi;dxSkinLondonLiquidSkyRS24.bpi;dxSkinMcSkinRS24.bpi;dxSkinMetropolisDarkRS24.bpi;dxSkinMetropolisRS24.bpi;dxSkinMoneyTwinsRS24.bpi;dxSkinOffice2007BlackRS24.bpi;dxSkinOffice2007BlueRS24.bpi;dxSkinOffice2007GreenRS24.bpi;dxSkinOffice2007PinkRS24.bpi;dxSkinOffice2007SilverRS24.bpi;dxSkinOffice2010BlackRS24.bpi;dxSkinOffice2010BlueRS24.bpi;dxSkinOffice2010SilverRS24.bpi;dxSkinOffice2013DarkGrayRS24.bpi;dxSkinOffice2013LightGrayRS24.bpi;dxSkinOffice2013WhiteRS24.bpi;dxSkinPumpkinRS24.bpi;dxSkinSevenClassicRS24.bpi;dxSkinSevenRS24.bpi;dxSkinSharpPlusRS24.bpi;dxSkinSharpRS24.bpi;dxSkinSilverRS24.bpi;dxSkinSpringTimeRS24.bpi;dxSkinStardustRS24.bpi;dxSkinSummer2008RS24.bpi;dxSkinTheAsphaltWorldRS24.bpi;dxSkinValentineRS24.bpi;dxSkinVS2010RS24.bpi;dxSkinWhiteprintRS24.bpi;dxSkinXmas2008BlueRS24.bpi;dxSkinOffice2016ColorfulRS24.bpi;dxSkinOffice2016DarkRS24.bpi;dxSkinVisualStudio2013BlueRS24.bpi;dxSkinVisualStudio2013DarkRS24.bpi;dxSkinVisualStudio2013LightRS24.bpi;vclactnband.bpi;xmlrtl.bpi;cxGridRS24.bpi;cxExportRS24.bpi;dxSpreadSheetCoreDialogsRS24.bpi;dxSpreadSheetCoreRS24.bpi;dxSpreadSheetRS24.bpi;dxServerModeRS24.bpi;dxSpreadSheetCoreConditionalFormattingDialogsRS24.bpi;cxTreeListRS24.bpi;dxPScxPCProdRS24.bpi;dxPSCoreRS24.bpi;dxPScxCommonRS24.bpi;dxPSLnksRS24.bpi;dxPScxExtCommonRS24.bpi;dxPsPrVwAdvRS24.bpi;dxBarExtItemsRS24.bpi;dxPSPrVwRibbonRS24.bpi;dxRibbonRS24.bpi;dxPScxGridLnkRS24.bpi;dxPSdxLCLnkRS24.bpi;dxPSdxSpreadSheetLnkRS24.bpi;FambdeXe10LC.bpi;dxRibbonCustomizationFormRS24.bpi</LinkPackageImports>
+        <Debugger_RunParams>*zp*</Debugger_RunParams>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Debugger_HostApplication>D:\Perforce-N\E1.WFM\kubnet51.exe</Debugger_HostApplication>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <Defines>NDEBUG;$(Defines)</Defines>
+        <TASM_Debugging>None</TASM_Debugging>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>(None)</Manifest_File>
+        <LinkPackageImports>rtl.bpi;vcl.bpi;cxLibraryRS24.bpi;dxGDIPlusRS24.bpi;dxCoreRS24.bpi;dxThemeRS24.bpi;vclx.bpi;dxBarRS24.bpi;dxLayoutControlRS24.bpi;cxPageControlRS24.bpi;dxOfficeCoreRS24.bpi;cxDataRS24.bpi;dbrtl.bpi;cxEditorsRS24.bpi;vclimg.bpi;vcldb.bpi;dxComnRS24.bpi;dxSkinsCoreRS24.bpi;dxSkinBlackRS24.bpi;dxSkinBlueprintRS24.bpi;dxSkinBlueRS24.bpi;dxSkinCaramelRS24.bpi;dxSkinCoffeeRS24.bpi;dxSkinDarkRoomRS24.bpi;dxSkinDarkSideRS24.bpi;dxSkinDevExpressDarkStyleRS24.bpi;dxSkinDevExpressStyleRS24.bpi;dxSkinFoggyRS24.bpi;dxSkinGlassOceansRS24.bpi;dxSkinHighContrastRS24.bpi;dxSkiniMaginaryRS24.bpi;dxSkinLilianRS24.bpi;dxSkinLiquidSkyRS24.bpi;dxSkinLondonLiquidSkyRS24.bpi;dxSkinMcSkinRS24.bpi;dxSkinMetropolisDarkRS24.bpi;dxSkinMetropolisRS24.bpi;dxSkinMoneyTwinsRS24.bpi;dxSkinOffice2007BlackRS24.bpi;dxSkinOffice2007BlueRS24.bpi;dxSkinOffice2007GreenRS24.bpi;dxSkinOffice2007PinkRS24.bpi;dxSkinOffice2007SilverRS24.bpi;dxSkinOffice2010BlackRS24.bpi;dxSkinOffice2010BlueRS24.bpi;dxSkinOffice2010SilverRS24.bpi;dxSkinOffice2013DarkGrayRS24.bpi;dxSkinOffice2013LightGrayRS24.bpi;dxSkinOffice2013WhiteRS24.bpi;dxSkinPumpkinRS24.bpi;dxSkinSevenClassicRS24.bpi;dxSkinSevenRS24.bpi;dxSkinSharpPlusRS24.bpi;dxSkinSharpRS24.bpi;dxSkinSilverRS24.bpi;dxSkinSpringTimeRS24.bpi;dxSkinStardustRS24.bpi;dxSkinSummer2008RS24.bpi;dxSkinTheAsphaltWorldRS24.bpi;dxSkinValentineRS24.bpi;dxSkinVS2010RS24.bpi;dxSkinWhiteprintRS24.bpi;dxSkinXmas2008BlueRS24.bpi;dxSkinOffice2016ColorfulRS24.bpi;dxSkinOffice2016DarkRS24.bpi;dxSkinVisualStudio2013BlueRS24.bpi;dxSkinVisualStudio2013DarkRS24.bpi;dxSkinVisualStudio2013LightRS24.bpi;vclactnband.bpi;xmlrtl.bpi;cxGridRS24.bpi;cxExportRS24.bpi;dxSpreadSheetCoreDialogsRS24.bpi;dxSpreadSheetCoreRS24.bpi;dxSpreadSheetRS24.bpi;dxServerModeRS24.bpi;dxSpreadSheetCoreConditionalFormattingDialogsRS24.bpi;cxTreeListRS24.bpi;dxPScxPCProdRS24.bpi;dxPSCoreRS24.bpi;dxPScxCommonRS24.bpi;dxPSLnksRS24.bpi;dxPScxExtCommonRS24.bpi;dxPsPrVwAdvRS24.bpi;dxBarExtItemsRS24.bpi;dxPSPrVwRibbonRS24.bpi;dxRibbonRS24.bpi;dxPScxGridLnkRS24.bpi;dxPSdxLCLnkRS24.bpi;dxPSdxSpreadSheetLnkRS24.bpi</LinkPackageImports>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    </PropertyGroup>
+    <ItemGroup>
+        <CppCompile Include="..\..\I.WFM\mainVDLL.cpp">
+            <BuildOrder>2</BuildOrder>
+        </CppCompile>
+        <DefFile Include="..\..\I.WFM\wfam.def">
+            <BuildOrder>3</BuildOrder>
+        </DefFile>
+        <CppCompile Include="..\ABCTR.BDS\aform00.cpp">
+            <Form>frform00</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>..\ABCTR.BDS\aform00.h</DependentOn>
+            <BuildOrder>4</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\ABCTR.BDS\aspr03.cpp">
+            <Form>fraspr03</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>..\ABCTR.BDS\aspr03.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\ABCTR.BDS\awarning.cpp">
+            <Form>fwarning</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>..\ABCTR.BDS\awarning.h</DependentOn>
+            <BuildOrder>85</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\DM_RAD10\UDM.cpp">
+            <Form>DMXE10</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+            <DependentOn>..\DM_RAD10\UDM.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\FUNC_ZPW.PRJ\FUNC_ZPW.CPP">
+            <BuildOrder>6</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\SERVIS\armerrw.cpp">
+            <DependentOn>..\SERVIS\armerrw.h</DependentOn>
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\SERVIS\cmpfd.cpp">
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\SERVIS\dopfunc.cpp">
+            <DependentOn>..\SERVIS\dopfunc.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\SERVIS\l_call_bud.cpp">
+            <DependentOn>..\SERVIS\l_call_bud.h</DependentOn>
+            <BuildOrder>86</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\SERVIS\srv_fil.cpp">
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\XLS_M.BDS\xls_m.cpp">
+            <DependentOn>..\XLS_M.BDS\xls_m.h</DependentOn>
+            <BuildOrder>11</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="frVi4et.cpp">
+            <Form>frVV</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>frVi4et.h</DependentOn>
+            <BuildOrder>12</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="frVi4et_1.cpp">
+            <Form>frVV1</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>frVi4et_1.h</DependentOn>
+            <BuildOrder>13</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="GADR.cpp">
+            <Form>fraspr1</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>GADR.h</DependentOn>
+            <BuildOrder>14</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="gTnTn.cpp">
+            <Form>frTNTN</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>gTnTn.h</DependentOn>
+            <BuildOrder>15</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="mZPSPR.cpp">
+            <BuildOrder>16</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="NSpNVSR.cpp">
+            <Form>frSpNVSR</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>NSpNVSR.h</DependentOn>
+            <BuildOrder>17</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="PrBar.cpp">
+            <Form>ProgressBarForm</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>PrBar.h</DependentOn>
+            <BuildOrder>18</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="progress.cpp">
+            <Form>frProgress</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>progress.h</DependentOn>
+            <BuildOrder>19</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="SpKfrEd.cpp">
+            <Form>frSpKfrEd</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>SpKfrEd.h</DependentOn>
+            <BuildOrder>20</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="SpKpR.cpp">
+            <Form>fraspr2</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>SpKpR.h</DependentOn>
+            <BuildOrder>21</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="SpKpRf.cpp">
+            <Form>SpKpRf</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>SpKpRf.h</DependentOn>
+            <BuildOrder>22</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="SpOPS.cpp">
+            <Form>fmSpOPS</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>SpOPS.h</DependentOn>
+            <BuildOrder>23</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="SpOts.cpp">
+            <Form>frSpOts</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>SpOts.h</DependentOn>
+            <BuildOrder>24</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="SpOtsd.cpp">
+            <Form>frSpOtsd</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>SpOtsd.h</DependentOn>
+            <BuildOrder>25</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0001.cpp">
+            <Form>frSpr0001</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0001.h</DependentOn>
+            <BuildOrder>26</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0002.cpp">
+            <Form>frSpr0002</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0002.h</DependentOn>
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0003.cpp">
+            <Form>frSpr0003</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0003.h</DependentOn>
+            <BuildOrder>28</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0004.cpp">
+            <Form>frSpr0004</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0004.h</DependentOn>
+            <BuildOrder>29</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0005.cpp">
+            <Form>frNRfin</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0005.h</DependentOn>
+            <BuildOrder>30</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0006.cpp">
+            <Form>frSpr0006</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0006.h</DependentOn>
+            <BuildOrder>31</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0007.cpp">
+            <Form>frSpr0007</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0007.h</DependentOn>
+            <BuildOrder>32</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0008.cpp">
+            <Form>frSpr0008</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0008.h</DependentOn>
+            <BuildOrder>33</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0009.cpp">
+            <Form>frSpr0009</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0009.h</DependentOn>
+            <BuildOrder>34</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0010.cpp">
+            <Form>frSpr0010</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0010.h</DependentOn>
+            <BuildOrder>35</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0011.cpp">
+            <Form>frSpr0011</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0011.h</DependentOn>
+            <BuildOrder>36</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0012.cpp">
+            <Form>frSpr0012</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0012.h</DependentOn>
+            <BuildOrder>37</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0013.cpp">
+            <Form>frSpr0013</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0013.h</DependentOn>
+            <BuildOrder>38</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0014.cpp">
+            <Form>frSpr0014</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0014.h</DependentOn>
+            <BuildOrder>39</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0016.cpp">
+            <Form>frspr0016</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0016.h</DependentOn>
+            <BuildOrder>40</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0017.cpp">
+            <Form>frSp0017</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0017.h</DependentOn>
+            <BuildOrder>41</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0018.cpp">
+            <Form>frSpKfr</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0018.h</DependentOn>
+            <BuildOrder>42</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0019.cpp">
+            <Form>frSpr0019</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0019.h</DependentOn>
+            <BuildOrder>43</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0020.cpp">
+            <Form>frSpr0020</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0020.h</DependentOn>
+            <BuildOrder>44</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0021.cpp">
+            <Form>frSpr0021</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0021.h</DependentOn>
+            <BuildOrder>45</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0022.cpp">
+            <Form>frSpr0022</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0022.h</DependentOn>
+            <BuildOrder>46</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0023.cpp">
+            <Form>frSpKpp</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0023.h</DependentOn>
+            <BuildOrder>47</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0024.cpp">
+            <Form>frNRfinPer</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0024.h</DependentOn>
+            <BuildOrder>48</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0025.cpp">
+            <Form>frNRfin25</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0025.h</DependentOn>
+            <BuildOrder>49</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0026.cpp">
+            <Form>frSpStrah</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0026.h</DependentOn>
+            <BuildOrder>50</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0027.cpp">
+            <Form>frNDFL</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0027.h</DependentOn>
+            <BuildOrder>51</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0028.cpp">
+            <Form>frSpr0028</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0028.h</DependentOn>
+            <BuildOrder>52</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0029.cpp">
+            <Form>frSpr0029</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0029.h</DependentOn>
+            <BuildOrder>53</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0030.cpp">
+            <Form>frSpr0030</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0030.h</DependentOn>
+            <BuildOrder>54</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0031.cpp">
+            <Form>frSpr0031</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0031.h</DependentOn>
+            <BuildOrder>55</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0032.cpp">
+            <Form>frSpr0032</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0032.h</DependentOn>
+            <BuildOrder>56</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0033.cpp">
+            <Form>frSpr0033</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0033.h</DependentOn>
+            <BuildOrder>57</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0034.cpp">
+            <Form>frSpr0034</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0034.h</DependentOn>
+            <BuildOrder>58</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0035.cpp">
+            <Form>frSpr0035</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0035.h</DependentOn>
+            <BuildOrder>59</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0036.cpp">
+            <Form>frSpr0036</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0036.h</DependentOn>
+            <BuildOrder>60</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0037.cpp">
+            <Form>frSpr0037</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0037.h</DependentOn>
+            <BuildOrder>61</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0038.cpp">
+            <Form>frSpr0038</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0038.h</DependentOn>
+            <BuildOrder>62</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0039.cpp">
+            <Form>frSpr0039</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0039.h</DependentOn>
+            <BuildOrder>63</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0040.cpp">
+            <Form>frSpr0040</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0040.h</DependentOn>
+            <BuildOrder>64</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0041.cpp">
+            <Form>frSpr0041</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0041.h</DependentOn>
+            <BuildOrder>65</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0042.cpp">
+            <Form>frspr0042</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0042.h</DependentOn>
+            <BuildOrder>66</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0043.cpp">
+            <Form>frSpr0043</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0043.h</DependentOn>
+            <BuildOrder>67</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0044.cpp">
+            <Form>frSpr0044</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0044.h</DependentOn>
+            <BuildOrder>68</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0045.cpp">
+            <Form>frSpr0045</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0045.h</DependentOn>
+            <BuildOrder>69</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0046.cpp">
+            <Form>frSpr0046</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0046.h</DependentOn>
+            <BuildOrder>70</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0047.cpp">
+            <Form>frNRfinBl</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0047.h</DependentOn>
+            <BuildOrder>71</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0048.cpp">
+            <Form>frSpr0048</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0048.h</DependentOn>
+            <BuildOrder>72</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0049.cpp">
+            <Form>frSpr0049</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0049.h</DependentOn>
+            <BuildOrder>73</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0050.cpp">
+            <Form>frSpr0050</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0050.h</DependentOn>
+            <BuildOrder>74</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0051.cpp">
+            <Form>frSpr0051</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0051.h</DependentOn>
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0052.cpp">
+            <Form>frSpr0052</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0052.h</DependentOn>
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0053.cpp">
+            <Form>frSpr0053</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0053.h</DependentOn>
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0054.cpp">
+            <Form>frSpr0054</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0054.h</DependentOn>
+            <BuildOrder>78</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0055.cpp">
+            <Form>frSpr0055</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0055.h</DependentOn>
+            <BuildOrder>79</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0056.cpp">
+            <Form>frSpr0056</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0056.h</DependentOn>
+            <BuildOrder>80</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0057.cpp">
+            <Form>frSpr0057</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0057.h</DependentOn>
+            <BuildOrder>81</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="spr0059.cpp">
+            <Form>frSpr0059</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>spr0059.h</DependentOn>
+            <BuildOrder>86</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="SpZConst.cpp">
+            <Form>frSpConst</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>SpZConst.h</DependentOn>
+            <BuildOrder>83</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="VSkpn.cpp">
+            <Form>frVSkpn</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>VSkpn.h</DependentOn>
+            <BuildOrder>84</BuildOrder>
+        </CppCompile>
+        <PCHCompile Include="zpsprPCH1.h">
+            <BuildOrder>0</BuildOrder>
+            <PCH>true</PCH>
+        </PCHCompile>
+        <FormResources Include="spr0033.dfm"/>
+        <FormResources Include="spr0034.dfm"/>
+        <FormResources Include="spr0032.dfm"/>
+        <FormResources Include="spr0030.dfm"/>
+        <FormResources Include="spr0031.dfm"/>
+        <FormResources Include="spr0038.dfm"/>
+        <FormResources Include="spr0039.dfm"/>
+        <FormResources Include="spr0037.dfm"/>
+        <FormResources Include="spr0035.dfm"/>
+        <FormResources Include="spr0036.dfm"/>
+        <FormResources Include="spr0029.dfm"/>
+        <FormResources Include="spr0022.dfm"/>
+        <FormResources Include="spr0023.dfm"/>
+        <FormResources Include="spr0021.dfm"/>
+        <FormResources Include="spr0019.dfm"/>
+        <FormResources Include="spr0020.dfm"/>
+        <FormResources Include="spr0027.dfm"/>
+        <FormResources Include="spr0028.dfm"/>
+        <FormResources Include="spr0026.dfm"/>
+        <FormResources Include="spr0024.dfm"/>
+        <FormResources Include="spr0025.dfm"/>
+        <FormResources Include="spr0040.dfm"/>
+        <FormResources Include="spr0055.dfm"/>
+        <FormResources Include="spr0056.dfm"/>
+        <FormResources Include="spr0054.dfm"/>
+        <FormResources Include="spr0052.dfm"/>
+        <FormResources Include="spr0053.dfm"/>
+        <FormResources Include="VSkpn.dfm"/>
+        <FormResources Include="SpZConst.dfm"/>
+        <FormResources Include="spr0057.dfm"/>
+        <FormResources Include="spr0059.dfm"/>
+        <FormResources Include="spr0051.dfm"/>
+        <FormResources Include="spr0044.dfm"/>
+        <FormResources Include="spr0045.dfm"/>
+        <FormResources Include="spr0043.dfm"/>
+        <FormResources Include="spr0041.dfm"/>
+        <FormResources Include="spr0042.dfm"/>
+        <FormResources Include="spr0049.dfm"/>
+        <FormResources Include="spr0050.dfm"/>
+        <FormResources Include="spr0048.dfm"/>
+        <FormResources Include="spr0046.dfm"/>
+        <FormResources Include="spr0047.dfm"/>
+        <FormResources Include="GADR.dfm"/>
+        <FormResources Include="gTnTn.dfm"/>
+        <FormResources Include="frVi4et_1.dfm"/>
+        <FormResources Include="frVi4et.dfm"/>
+        <FormResources Include="progress.dfm"/>
+        <FormResources Include="SpKfrEd.dfm"/>
+        <FormResources Include="PrBar.dfm"/>
+        <FormResources Include="NSpNVSR.dfm"/>
+        <FormResources Include="..\ABCTR.BDS\aspr03.dfm"/>
+        <FormResources Include="..\ABCTR.BDS\awarning.dfm"/>
+        <FormResources Include="..\ABCTR.BDS\aform00.dfm"/>
+        <FormResources Include="..\DM_RAD10\UDM.dfm"/>
+        <FormResources Include="SpKpR.dfm"/>
+        <FormResources Include="spr0011.dfm"/>
+        <FormResources Include="spr0012.dfm"/>
+        <FormResources Include="spr0010.dfm"/>
+        <FormResources Include="spr0008.dfm"/>
+        <FormResources Include="spr0009.dfm"/>
+        <FormResources Include="spr0017.dfm"/>
+        <FormResources Include="spr0018.dfm"/>
+        <FormResources Include="spr0016.dfm"/>
+        <FormResources Include="spr0013.dfm"/>
+        <FormResources Include="spr0014.dfm"/>
+        <FormResources Include="spr0007.dfm"/>
+        <FormResources Include="SpOtsd.dfm"/>
+        <FormResources Include="spr0001.dfm"/>
+        <FormResources Include="SpOts.dfm"/>
+        <FormResources Include="SpKpRf.dfm"/>
+        <FormResources Include="SpOPS.dfm"/>
+        <FormResources Include="spr0005.dfm"/>
+        <FormResources Include="spr0006.dfm"/>
+        <FormResources Include="spr0004.dfm"/>
+        <FormResources Include="spr0002.dfm"/>
+        <FormResources Include="spr0003.dfm"/>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+        <Borland.ProjectType>CppDynamicLibrary</Borland.ProjectType>
+        <BorlandProject>
+            <CPlusPlusBuilder.Personality>
+                <ProjectProperties>
+                    <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+                    <ProjectProperties Name="ManagePaths">True</ProjectProperties>
+                    <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+                    <ProjectProperties Name="IndexFiles">False</ProjectProperties>
+                </ProjectProperties>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k240.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp240.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k240.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp240.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </CPlusPlusBuilder.Personality>
+            <Deployment Version="3">
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin\cc32240.dll" Class="DependencyModule">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32c240mt.dll" Class="DependencyModule">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin64\cc64240.dll" Class="DependencyModule">
+                    <Platform Name="Win64">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgcrtl.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(UsingDelphiRTL)'=='true'" LocalName="$(BDS)\bin64\borlndmm.dll" Class="DependencyModule">
+                    <Platform Name="Win64">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(UsingDelphiRTL)'=='true'" LocalName="$(BDS)\bin\borlndmm.dll" Class="DependencyModule">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin64\cc64240mt.dll" Class="DependencyModule">
+                    <Platform Name="Win64">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgstl.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\W\W.TZP\zpspr.dll" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>zpspr.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\W\W.TZP\zpspr.tds" Configuration="Debug" Class="DebugSymbols">
+                    <Platform Name="Win32">
+                        <RemoteName>zpspr.tds</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin\cc32c240.dll" Class="DependencyModule">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32240mt.dll" Class="DependencyModule">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXResource">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClassesDexFile">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AdditionalDebugSymbols">
+                    <Platform Name="Win32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch768">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon144">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeMipsFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="ProjectOutput">
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Linux64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyFramework">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch640">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch1024">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceDebug">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch320">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSInfoPList"/>
+                <DeployClass Name="AndroidLibnativeArmeabiFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DebugSymbols">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch1536">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage470">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage640">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch640x1136">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSEntitlements"/>
+                <DeployClass Name="Android_LauncherIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidGDBServer">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXInfoPList"/>
+                <DeployClass Name="ProjectOSXEntitlements"/>
+                <DeployClass Name="iPad_Launch2048">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStyles">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage426">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashImageDef">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSResource">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectAndroidManifest">
+                    <Platform Name="Android">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_DefaultAppIcon">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="File">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Android">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidServiceOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.bpl</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage960">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceResourceRules"/>
+                <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
+            </Deployment>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Cpp.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>
